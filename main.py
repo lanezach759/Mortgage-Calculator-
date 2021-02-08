@@ -26,20 +26,6 @@ apr = .0294
 monthly_apr = float(apr) / 12
 monthly_loan = float(loan) / 360
 
-## Bottom half of equation
-#i1 = float(monthly_apr) + 1.0
-#print ("i1 = " + str(i1))
-
-#i2 = float(i1) ** float(-360)
-#print ("i2 = " + str(i2))
-
-#i3 = float(1) - float(i2)
-#print ("i3 = " + str(i3))
-
-#i4 = float(monthly_apr) / float(i3)
-#print ("i4 = " + str(i4))
-
-# Test function
 def mortgagecalc(monthly_apr, loan):
   i1 = float(monthly_apr) + 1.0
   i2 = float(i1) ** float(-360)
@@ -48,11 +34,4 @@ def mortgagecalc(monthly_apr, loan):
   m = loan * i4
   return m
 
-
-#m = loan * i4
-
-
 print (mortgagecalc(monthly_apr, loan))
-
-
-
